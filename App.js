@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { ScrollView } from 'react-native';
+import { Card, Title, Paragraph } from 'react-native-paper';
+// import { useTheme } from 'react-native-paper';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const MyComponent = () => (
+  <>
+  <ScrollView>
+  <Card>
+    <Card.Cover source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZdr18OjYKxxBxfzNyPpZxHxIDBmGuqg9QNw&usqp=CAU' }} />
+    <Card.Content>
+      <Title>Vaccinations coverage above 80%</Title>
+      <Paragraph>This is a description text that shows the summary of what this article is talking about.</Paragraph>
+    </Card.Content>
+  </Card>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  <Card>
+    <Card.Content>
+      <Title>More children take turns to live with each parent in post-divorce arrangements</Title>
+  </Card.Content>
+  </Card>
+
+  <Card>
+    <Card.Content>
+      <Title>Chinese tennis star Peng Shuai tells IOC president she is safe during video call</Title>
+  </Card.Content>
+  </Card>
+
+  <Card>
+    <Card.Content>
+      <Title>Chinese tennis star Peng Shuai tells IOC president she is safe during video call</Title>
+  </Card.Content>
+  </Card>
+
+
+  </ScrollView>
+  </>
+);
+
+export default MyComponent;
